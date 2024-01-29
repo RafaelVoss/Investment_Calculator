@@ -19,6 +19,7 @@ function composeDataLines(data){
 
 export default function CalculatorOutput({params}) {
     const data = composeDataLines(calculateInvestmentResults(params));
+    if (data.length===0) return <h3 className="center">Change DURATION to a number equal or greater than one.</h3>;
     return(
         <table id="result">
             <thead>

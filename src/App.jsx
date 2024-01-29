@@ -5,10 +5,10 @@ import CalculatorInput from './components/CalculatorInput.jsx';
 import CalculatorOutput from './components/CalculatorOutput.jsx';
 
 const INITIAL_PARAMS = {
-  initialInvestment: 0,
-  annualInvestment: 0,
-  expectedReturn: 0,
-  duration: 1,
+  initialInvestment: 1000,
+  annualInvestment: 100,
+  expectedReturn: 5,
+  duration: 10,
 }
 
 function App() {
@@ -18,7 +18,8 @@ function App() {
     setParams(prevParams => {
       return {
         ...prevParams,
-        [field]: newValue
+        // [field]: Number(newValue)
+        [field]: +newValue
       }
     })
   };
